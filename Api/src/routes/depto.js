@@ -2,7 +2,16 @@ const { Router } = require('express');
 const {Depto} = require("../db");
 const router = Router()
 
-router.post("/depto", async (req,res)=>{
+router.get('/' , async(req,res)=>{
+    try {
+        const allDepto = await Depto.findAll();
+        res.status(200).send(allDepto);
+    } catch (error) {
+        res.status(404).send(error.message);
+    }
+})
+
+router.post("/", async (req,res)=>{
     try {
         const {meters , ubication ,owner ,price, available, images , description} = req.body;
         // console.log(meters , ubication ,owner ,price, available, images , description);

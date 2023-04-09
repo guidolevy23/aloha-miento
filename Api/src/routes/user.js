@@ -2,7 +2,28 @@ const { Router } = require('express');
 const {User} = require("../db.js");
 const router = Router()
 
-router.post("/user", async (req,res) => {
+router.get('/' , async(req,res)=>{
+    try {
+        const allUser = await User.findAll();
+        res.status(200).send(allUser);
+    } catch (error) {
+        res.status(404).send(error.message);
+    }
+})
+
+router.delete('/:id', async (req,res) =>{
+    const {id} = req.params
+    console.log(id);
+    try {
+        const deletedUser = await User.findAll({id:id})
+        await User.destroy({where:{id:id}})
+        res.status(200).send(deletedUser);
+    } catch (error) {
+        res.status(404).send(error.message);
+    }
+})
+
+router.post("/", async (req,res) => {
     try {
         const {email , name ,last_name ,image} = req.body;
         console.log(email);
