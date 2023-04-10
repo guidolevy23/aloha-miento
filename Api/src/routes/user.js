@@ -1,11 +1,12 @@
 const { Router } = require('express');
-const {User} = require("../db.js");
+const {User , Depto} = require("../db.js");
 const router = Router()
 
 //get all
+// find all trae un array
 router.get('/' , async(req,res)=>{
     try {
-        const allUser = await User.findAll();
+        const allUser = await User.findAll({include:Depto});
         res.status(200).send(allUser);
     } catch (error) {
         res.status(404).send(error.message);
@@ -16,14 +17,13 @@ router.get('/' , async(req,res)=>{
 router.get('/:id', async(req,res)=>{
     try {
         const {id} = req.params;
-        const oneUser = await User.findAll({
+        const oneUser = await User.findOne({
             where:{
-                id:id
-            }
+                id_user:id,
+            },
+            include:Depto
         });
-        if(!oneUser[0].dataValues.name){
-            throw Error()
-        }
+        if(!oneUser) throw new Error("User does not exist")
         res.status(200).send(oneUser)
     } catch (error) {
         res.status(404).send(error.message)
@@ -43,13 +43,24 @@ router.post("/", async (req,res) => {
     
 })
 
+//update one
+router.put('/', async(req,res)=>{
+    try {
+        const {id_user , id_depto} = req.body;
+        const theUser = await User.findByPk(id_user);
+        await theUser.addDeptos(id_depto);
+        res.status(200).send(theUser);
+    } catch (error) {
+        
+    }
+})
 
 //delete one
 router.delete('/:id', async (req,res) =>{
     const {id} = req.params
     console.log(id);
     try {
-        const deletedUser = await User.findAll({id:id})
+        const deletedUser = await User.findByPk(id)
         await User.destroy({where:{id:id}})
         res.status(200).send(deletedUser);
     } catch (error) {

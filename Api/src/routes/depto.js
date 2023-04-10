@@ -16,14 +16,8 @@ router.get('/' , async(req,res)=>{
 router.get('/:id', async(req,res)=>{
     try {
         const {id} = req.params;
-        const oneDepto = await Depto.findAll({
-            where:{
-                id:id
-            }
-        });
-        if(!oneDepto[0].dataValues.name){
-            throw Error()
-        }
+        const oneDepto = await Depto.findByPk(id)
+        if(!oneDepto) throw new Error("User does not exist")
         res.status(200).send(oneDepto)
     } catch (error) {
         res.status(404).send(error.message)
@@ -46,7 +40,7 @@ router.delete('/:id', async (req,res) =>{
     const {id} = req.params
     console.log(id);
     try {
-        const deletedDepto = await User.findAll({id:id})
+        const deletedDepto = await Depto.findByPk()
         await Depto.destroy({where:{id:id}})
         res.status(200).send(deletedDepto);
     } catch (error) {
