@@ -11,6 +11,14 @@ router.get('/' , async(req,res)=>{
     }
 })
 
+router.get('/', async(req,res)=>{
+    try {
+        
+    } catch (error) {
+        
+    }
+})
+
 router.delete('/:id', async (req,res) =>{
     const {id} = req.params
     console.log(id);
