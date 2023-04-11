@@ -34,7 +34,6 @@ router.get('/:id', async(req,res)=>{
 router.post("/", async (req,res) => {
     try {
         const {email , name ,last_name ,image} = req.body;
-        console.log(email);
         const newUser = await User.create({email , name ,last_name ,image}); 
         res.status(200).send(newUser)
     } catch (error) {

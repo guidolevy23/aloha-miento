@@ -1,7 +1,8 @@
 const {Sequelize} = require('sequelize');
 require('dotenv').config();
 const DeptoModel = require('./models/depto.js');
-const UserModel = require('./models/user.js')
+const UserModel = require('./models/user.js');
+const SellerModel = require('./models/seller.js');
 const {
     DB_USER, DB_PASS, DB_NAME,
   } = process.env;
@@ -13,8 +14,9 @@ const database = new Sequelize(
 
 UserModel(database);
 DeptoModel(database);
+SellerModel(database);
 
-const {User , Depto} = database.models
+const {User , Depto , Seller} = database.models
 
 Depto.belongsToMany(User, {through: "DeptoUser"} );
 User.belongsToMany(Depto, {through: "DeptoUser"} );
