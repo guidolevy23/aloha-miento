@@ -1,0 +1,37 @@
+PAGINA DE ALQUILER DE DEPARTAMENTOS "Aloha-Mientos"(dile hola al hogar de tus sueños) o "Deja que te aloje"(llamanos y nosotros nos ocupamos de todo)
+
+
+DEPARTAMENTO:
+mts2(integer)
+ubicacion (text)
+dueño (text)
+precio (integer)
+disponible (boolean)
+images(array, text)
+description(text)
+category(mas adelante para ponerle depto o local por ejemplo)
+rating/comments(futuro para calificarla)
+
+
+
+USUARIO:
+id(serial) (Primary key)
+mail (text)
+nombre (text)
+apellido (text)
+deptos elegidos(array)
+image(text)
+
+
+VENDEDOR:
+id(serial) (Primary key)
+mail (text)
+nombre (text)
+apellido (text)
+deptos en venta(array)
+image(text)
+
+
+
+
+

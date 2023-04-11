@@ -11,6 +11,8 @@ const {
 const database = new Sequelize(
     `postgres://${DB_USER}:${DB_PASS}@localhost:5432/${DB_NAME}`
 ,{logging:false});
+// CONEXION CON LA BASE DE DATOS
+
 
 UserModel(database);
 DeptoModel(database);
@@ -20,5 +22,9 @@ const {User , Depto , Seller} = database.models
 
 Depto.belongsToMany(User, {through: "DeptoUser"} );
 User.belongsToMany(Depto, {through: "DeptoUser"} );
-// CONEXION CON LA BASE DE DATOS
+
+Seller.hasMany(Depto);
+Depto.belongsTo(Seller);
+
+
 module.exports = {database , ...database.models};
