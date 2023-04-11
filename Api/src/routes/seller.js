@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const {Seller} = require("../db");
+const {Seller, Depto,User} = require("../db");
 const router = Router()
 
 //post one
@@ -17,7 +17,7 @@ router.post('/', async(req,res)=>{
 //get all
 router.get('/' , async(req,res)=>{
     try {
-        const allSeller = await Seller.findAll();
+        const allSeller = await Seller.findAll({include:[{model:Depto},{model:User}]});
         res.status(200).send(allSeller);
     } catch (error) {
         res.status(404).send(error.message);
@@ -32,6 +32,7 @@ router.get('/:id', async(req,res)=>{
             where:{
                 id_seller:id,
             },
+            include:[{model:Depto},{model:User}]
         });
         if(!oneSeller) throw new Error("Seller does not exist")
         res.status(200).send(oneSeller)
@@ -58,7 +59,7 @@ router.delete('/:id', async (req,res) =>{
     const {id} = req.params
     try {
         const deletedSeller = await Seller.findByPk(id)
-        await Seller.destroy({where:{id:id}})
+        await Seller.destroy({where:{id_seller:id}})
         res.status(200).send(deletedSeller);
     } catch (error) {
         res.status(404).send(error.message);

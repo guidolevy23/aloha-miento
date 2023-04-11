@@ -26,5 +26,8 @@ User.belongsToMany(Depto, {through: "DeptoUser"} );
 Seller.hasMany(Depto);
 Depto.belongsTo(Seller);
 
+Seller.belongsToMany(User, {through: "UserSeller"});
+User.belongsToMany(Seller, {through: "UserSeller"});
+
 
 module.exports = {database , ...database.models};

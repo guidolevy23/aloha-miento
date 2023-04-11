@@ -16,10 +16,10 @@ const Depto = (database) => {
             type: DataTypes.STRING,
             allowNull : false,
         },
-        owner:{
-            type: DataTypes.STRING,
-            allowNull : false,
-        },
+        // owner:{
+        //     type: DataTypes.STRING,
+        //     allowNull : false,
+        // },
         price:{
             type: DataTypes.INTEGER,
             allowNull : false,

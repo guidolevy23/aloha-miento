@@ -1,12 +1,14 @@
 const { Router } = require('express');
-const {User , Depto} = require("../db.js");
+const {User , Depto, Seller} = require("../db.js");
 const router = Router()
 
 //get all
 // find all trae un array
 router.get('/' , async(req,res)=>{
     try {
-        const allUser = await User.findAll({include:Depto});
+        const allUser = await User.findAll({
+            include: [{model:Depto},{model:Seller}],
+        });
         res.status(200).send(allUser);
     } catch (error) {
         res.status(404).send(error.message);
@@ -21,7 +23,7 @@ router.get('/:id', async(req,res)=>{
             where:{
                 id_user:id,
             },
-            include:Depto
+            include: [{model:Depto},{model:Seller}],
         });
         if(!oneUser) throw new Error("User does not exist")
         res.status(200).send(oneUser)
@@ -47,7 +49,13 @@ router.put('/', async(req,res)=>{
     try {
         const {id_user , id_depto} = req.body;
         const theUser = await User.findByPk(id_user);
+        const theDepto = await Depto.findOne({
+            where:
+                {id_depto},
+            include:Seller
+        });
         await theUser.addDeptos(id_depto);
+        await theUser.addSeller(theDepto.Seller.dataValues.id_seller)
         res.status(200).send(theUser);
     } catch (error) {
         
