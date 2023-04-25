@@ -1,7 +1,9 @@
-import { GET_DEPTOS } from "../Actions/actions.jsx";
+import { GET_DEPTOS, GET_ONE_DEPTO, GET_USERS } from "../Actions/actions.jsx";
 
 const initialState = {
-    deptos:[]
+    deptos:[],
+    users:[],
+    oneDepto: {}
 }
 
 const rootReducer = (state = initialState , action)=>{
@@ -11,6 +13,16 @@ const rootReducer = (state = initialState , action)=>{
             return{
                 ...state,
                 deptos: action.payload
+            }
+        case GET_USERS:
+            return{
+                ...state,
+                users: action.payload
+            }
+        case GET_ONE_DEPTO:
+            return{
+                ...state,
+                oneDepto: action.payload
             }
         default:
             return {...state};
