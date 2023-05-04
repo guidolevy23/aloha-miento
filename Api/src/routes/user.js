@@ -46,6 +46,7 @@ router.post("/", async (req,res) => {
 
 //update one
 router.put('/', async(req,res)=>{
+    console.log("ESTOY EN ROUTES")
     try {
         const {id_user , id_depto} = req.body;
         const theUser = await User.findByPk(id_user);
@@ -54,7 +55,9 @@ router.put('/', async(req,res)=>{
                 {id_depto},
             include:Seller
         });
-        await theUser.addDeptos(id_depto);
+        
+        console.log(theUser,theDepto)
+        await theUser.addDeptos(theDepto);
         await theUser.addSeller(theDepto.Seller.dataValues.id_seller)
         res.status(200).send(theUser);
     } catch (error) {

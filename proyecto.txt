@@ -31,6 +31,106 @@ apellido (text)
 deptos en venta(array)
 image(text)
 
+[
+	{
+		"id_depto": 5,
+		"meters": 150,
+		"ubication": "Charcas 4154, Capital Federal, Buenos Aires, Argentina",
+		"price": 150000,
+		"available": true,
+		"images": [
+			"https://images.adsttc.com/media/images/5954/c1f4/b22e/38be/e300/0100/large_jpg/2015_DEPTO_JSMH_SMA_PHOTO_by_Paul_Rivera__03.jpg?1498726896"
+		],
+		"description": "Este departamento en alquiler es una opción confortable y práctica, ubicado en un edificio moderno en una zona céntrica de la ciudad. Con dos habitaciones luminosas y amplias equipadas con camas matrimoniales, sala de estar cómoda, cocina totalmente equipada y dos baños completos con ducha y agua caliente, este departamento ofrece todas las comodidades necesarias para una estadía confortable. Además, cuenta con aire acondicionado y calefacción central, lavadora y secadora de ropa, y un balcón con vistas panorámicas de la ciudad. En resumen, este departamento es una opción ideal para aquellos que buscan alojamiento cómodo y bien ubicado.",
+		
+	},
+	{
+		"id_depto": 6,
+		"meters": 50,
+		"ubication": "Charcas 4154, Lanus, Provincia de Buenos Aires, Argentina",
+		"price": 50000,
+		"available": true,
+		"images": [
+			"https://peru21.pe/resizer/Jm8PL1dej6pTymZ5-4Oif-7KoWY=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/ZAHSA6RW6VBIPHJL6YW5CANUOI.jpg"
+		],
+		"description": "Este departamento en alquiler es un monoambiente moderno y acogedor, perfecto para una persona o pareja. Cuenta con una habitación con cama matrimonial, armario y mesa de noche, una sala de estar con un sofá y televisión de pantalla plana, y una pequeña cocina equipada con nevera, microondas, cocina eléctrica y cafetera. También dispone de un baño completo con ducha y agua caliente. La propiedad cuenta con aire acondicionado y calefacción central, y ofrece una ubicación privilegiada en una zona céntrica de la ciudad. En resumen, este monoambiente es una opción cómoda y práctica para aquellos que buscan un alojamiento de calidad en una ubicación privilegiada.",
+		
+	},
+	{
+		"id_depto": 10,
+		"meters": 70,
+		"ubication": "Calle 10, 123, Centro, Buenos Aires, Argentina",
+		"price": 1200,
+		"available": true,
+		"images": [
+			""
+		],
+		"description": "Este hermoso departamento cuenta con 70 metros cuadrados y está ubicado en el corazón de la ciudad de Buenos Aires, en el barrio de Centro. Dispone de dos habitaciones amplias y luminosas con camas matrimoniales, armarios y mesas de noche, una sala de estar cómoda con un sofá y televisión de pantalla plana, y una cocina totalmente equipada con nevera, horno, cocina eléctrica, microondas y cafetera. También dispone de un baño completo con ducha y agua caliente. La propiedad cuenta con aire acondicionado y calefacción central, y ofrece una ubicación privilegiada cerca de restaurantes, bares, tiendas y transporte público. No dude en contactarnos para más información y reservas.",
+		
+	},
+	{
+		"id_depto": 8,
+		"meters": 70,
+		"ubication": "Calle 10, Buenos Aires, Argentina ",
+		"price": 1200,
+		"available": true,
+		"images": [
+			"https://example.com/apartment/image1.jpg",
+			"https://example.com/apartment/image2.jpg",
+			"https://example.com/apartment/image3.jpg"
+		],
+		"description": "Este hermoso departamento cuenta con 70 metros cuadrados y está ubicado en el corazón de la ciudad de Buenos Aires, en el barrio de Centro. Dispone de dos habitaciones amplias y luminosas con camas matrimoniales, armarios y mesas de noche, una sala de estar cómoda con un sofá y televisión de pantalla plana, y una cocina totalmente equipada con nevera, horno, cocina eléctrica, microondas y cafetera. También dispone de un baño completo con ducha y agua caliente. La propiedad cuenta con aire acondicionado y calefacción central, y ofrece una ubicación privilegiada cerca de restaurantes, bares, tiendas y transporte público. No dude en contactarnos para más información y reservas.",
+		
+	},
+	{
+		"id_depto": 4,
+		"meters": 150,
+		"ubication": "Armenia 2362, Capital Federal, Buenos Aires, Argentina",
+		"price": 150000,
+		"available": true,
+		"images": [
+			"https://www.inmuebles24.com/noticias/wp-content/uploads/2020/01/departamentos-de-lujo-2.jpeg"
+		],
+		"description": "Este departamento en alquiler es una opción cómoda y práctica para cualquier persona que busque un lugar para vivir en una ubicación céntrica de la ciudad. Con dos habitaciones amplias y luminosas, dos baños completos, una sala de estar acogedora, comedor y cocina totalmente equipada, este departamento ofrece todas las comodidades necesarias para una estadía agradable. Además, cuenta con aire acondicionado y calefacción central, lavadora y secadora de ropa, y un balcón con vistas panorámicas de la ciudad. En general, este departamento es una opción excelente para aquellos que buscan una vida cómoda y práctica en una ubicación conveniente.",
+		
+	},
+	{
+		"id_depto": 3,
+		"meters": 100,
+		"ubication": "Avellaneda 2465, Capital Federal, Buenos Aires, Argentina",
+		"price": 100000,
+		"available": true,
+		"images": [
+			"https://media.admagazine.com/photos/6317bd95d75f2fd76bd148aa/master/w_1600%2Cc_limit/APR%2520-%2520Nooor%2520-%2520Appartement%252045m2%2520rue%2520de%2520Grenelle%2520-%2520cre%25CC%2581dit%2520Nicolas%2520MatheusG19_2044.jpg"
+		],
+		"description": "Este departamento en alquiler es una opción cómoda y funcional para quienes buscan alojamiento en una ubicación céntrica de la ciudad. Con dos habitaciones luminosas y amplias, dos baños completos, sala de estar, comedor y cocina totalmente equipada, este departamento es perfecto para estancias prolongadas. Además, cuenta con aire acondicionado y calefacción central, y desde el balcón se pueden disfrutar de vistas panorámicas de la ciudad. En resumen, este departamento en alquiler ofrece todas las comodidades necesarias para una estadía confortable en una ubicación privilegiada.",
+		
+	},
+	{
+		"id_depto": 9,
+		"meters": 70,
+		"ubication": "Calle 10, 123, Centro, Buenos Aires, Argentina",
+		"price": 1200,
+		"available": true,
+		"images": [
+			""
+		],
+		"description": "Este hermoso departamento cuenta con 70 metros cuadrados y está ubicado en el corazón de la ciudad de Buenos Aires, en el barrio de Centro. Dispone de dos habitaciones amplias y luminosas con camas matrimoniales, armarios y mesas de noche, una sala de estar cómoda con un sofá y televisión de pantalla plana, y una cocina totalmente equipada con nevera, horno, cocina eléctrica, microondas y cafetera. También dispone de un baño completo con ducha y agua caliente. La propiedad cuenta con aire acondicionado y calefacción central, y ofrece una ubicación privilegiada cerca de restaurantes, bares, tiendas y transporte público. No dude en contactarnos para más información y reservas.",
+		
+	},
+	{
+		"id_depto": 7,
+		"meters": 50,
+		"ubication": "Hola 123, Lanus, Provincia de Buenos Aires, Argentina",
+		"price": 50000,
+		"available": true,
+		"images": [
+			"https://peru21.pe/resizer/Jm8PL1dej6pTymZ5-4Oif-7KoWY=/580x330/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/ZAHSA6RW6VBIPHJL6YW5CANUOI.jpg"
+		],
+		"description": "Este departamento en alquiler es un monoambiente moderno y acogedor, perfecto para una persona o pareja. Cuenta con una habitación con cama matrimonial, armario y mesa de noche, una sala de estar con un sofá y televisión de pantalla plana, y una pequeña cocina equipada con nevera, microondas, cocina eléctrica y cafetera. También dispone de un baño completo con ducha y agua caliente. La propiedad cuenta con aire acondicionado y calefacción central, y ofrece una ubicación privilegiada en una zona céntrica de la ciudad. En resumen, este monoambiente es una opción cómoda y práctica para aquellos que buscan un alojamiento de calidad en una ubicación privilegiada.",
+		
+	}
+]
 
 
 

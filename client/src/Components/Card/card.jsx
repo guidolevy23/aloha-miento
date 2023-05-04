@@ -16,7 +16,7 @@ function Card (props){
             <p>Precio: {props.price}</p>
             <p>Disponibilidad: { props.available? "Disponible":"No disponible"}</p>
             <p>Metros cuadrados: {props.meters}</p>
-            <Link to={`/description/${props.id}`}><button onClick={handleClick}>MAS INFO</button></Link>
+            <Link to={`/description/${props.id}`}><button onClick={()=>handleClick()}>MAS INFO</button></Link>
         </div>
     )
 }

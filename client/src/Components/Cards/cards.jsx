@@ -1,7 +1,7 @@
 import React , {useEffect} from "react";
 import Card from "../Card/card.jsx";
 import { useDispatch, useSelector } from "react-redux";
-import { getDeptos , cleanOneDepto} from "../../Redux/Actions/actions.jsx";
+import { getDeptos , cleanOneDepto, getUsers } from "../../Redux/Actions/actions.jsx";
 
 
 
@@ -10,9 +10,12 @@ function Cards (props){
     const deptos = useSelector(state=>state.deptos)
     useEffect(()=>{
         dispatch(getDeptos())
+        dispatch(getUsers())
         dispatch(cleanOneDepto())
     },[props])
     return(
+        <div>
+        <h2>DEPARTAMENTOS</h2>
         <div className="caja">
             {deptos.map(depto=>{
                 return(
@@ -26,6 +29,7 @@ function Cards (props){
                     />
                     )})}
             
+        </div>
         </div>
     )
 }

@@ -6,6 +6,7 @@ import NavBar from './Components/NavBar/NavBar.jsx';
 import {Route} from 'react-router-dom'
 import Contact from './Components/Contact/contact';
 import Cards from './Components/Cards/cards';
+import Cart from './Components/Cart/cart.jsx';
 
 
 
@@ -22,6 +23,9 @@ function App() {
       </Route>
       <Route exact path='/contact'>
         <Contact/>
+      </Route>
+      <Route exact path='/cart'>
+        <Cart/>
       </Route>
       <Route path='/description/:id'>
         <Description/>

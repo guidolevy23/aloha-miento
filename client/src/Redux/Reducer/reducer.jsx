@@ -1,13 +1,13 @@
-import { GET_DEPTOS, GET_ONE_DEPTO, GET_USERS , CLEAN_ONE_DEPTO } from "../Actions/actions.jsx";
+import { GET_DEPTOS, GET_ONE_DEPTO, GET_USERS , CLEAN_ONE_DEPTO , UPDATE_USER , GET_ONE_USERS} from "../Actions/actions.jsx";
 
 const initialState = {
     deptos:[],
     users:[],
-    oneDepto: {}
+    oneDepto: {},
+    user : {}
 }
 
 const rootReducer = (state = initialState , action)=>{
-    console.log(action.type);
     switch (action.type) {
         case GET_DEPTOS:
             return{
@@ -28,6 +28,15 @@ const rootReducer = (state = initialState , action)=>{
             return {
                 ...state,
                 oneDepto: {}
+            }
+        case UPDATE_USER:
+            return{
+                ...state
+            }
+        case GET_ONE_USERS:
+            return{
+                ...state,
+                user : action.payload
             }
         default:
             return {...state};

@@ -15,6 +15,8 @@ function NavBar(props){
                 <br />
                 <NavLink to="/deptos">APARTMENTS</NavLink>
                 <br />
+                <NavLink to="/cart">CART</NavLink>
+                <br />
                 <SearchBar/>
             </div>
         </div>
