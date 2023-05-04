@@ -1,16 +1,23 @@
-import React from "react";
+import React , {useEffect} from "react";
 import Card from "../Card/card.jsx";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { getDeptos , cleanOneDepto} from "../../Redux/Actions/actions.jsx";
 
 
 
 function Cards (props){
+    const dispatch = useDispatch();
     const deptos = useSelector(state=>state.deptos)
+    useEffect(()=>{
+        dispatch(getDeptos())
+        dispatch(cleanOneDepto())
+    },[props])
     return(
         <div className="caja">
             {deptos.map(depto=>{
                 return(
                     <Card
+                    id={depto.id_depto}
                     meters={depto.meters} 
                     ubication={depto.ubication}
                     price={depto.price}

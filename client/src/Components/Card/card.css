@@ -2,10 +2,9 @@ img{
     width: 200px;
 }
 .borde{
-    width: 300px;
-    /* height: 100px; */
-    /* padding: 20px; */
+    width: 400px;
+    height : 400px;
+    padding: 20px;
+    margin:20px;
     border: 2px solid black;
-    /* box-sizing: border-box; */
-
 }
